@@ -1,0 +1,42 @@
+Aula 03: Hello World!
+
+Depois de selecionada a pasta para criar o projeto, 
+é necessário ir ao prompt ou node-prompt e digitar ng new 'nomeProjeto', necessário que comece com letra.
+
+Depois disso é criado o projeto com todas as dependencias do Angular 2, por conta do npm, porem, não mostrado
+a pasta node_modules
+
+Directory C:\Users\Dell-5547\Documents\Estudos\Loiane_Angular\01-hello-world\primeiro-projeto 
+exists and is already an Angular CLI project. - Mensagem exibida depois da instalação do projeto via npm.
+
+Dentro da pasta src > app é onde o trabalho é feito
+
+Para que o projeto saia no browser é necessário que se mude o caminho no terminal para a pasta raiz
+primeiro-projeto, depois disso utilizar o comando ng serve para que o código seja servido ao browser.
+
+Fazendo o Olá mundo, mudando o app.component.ts 
+
+Criando o componente manualmente depois será utilzido um comendo do Angular/CLI que 
+é o ng generate component nome-component ou somente ng g c nome-componente
+
+Dentro de app é criado uma pasta para o componente com o nome e um arquivo .ts(typescript) que representa
+o componente.
+
+*É falado sobre o EcmaScript 15 ou ES6, JavaScript Avançado.
+
+É usado um Decorator(seria como uma anotação), para indicar que é um Component e seus metadados(ou propriedade),
+onde cada metadado deve ser indicado sua localização, para isso é necessário indicar por
+impor { Component } from '@angular/core'; - exemplo do proprio decorator component
+
+Tentando utilizar o <meu-primeiro-component></meu-primeiro-component> dentro do app.component, porem isso
+gera um erro pois a tag customizada não é reconhecida, para isso é necessário importar 
+em outro lugar, algumas modificações são necessárias, como o export na frente do class do component
+E também é necessário declarar o component em declarations: [AppComponent, MeuPrimeiroCompoent], dentro
+do AppModule para que seja visivel e também é necessário importar.
+
+Tudo isso acima, feito na mão, para entender o funcionamento.
+
+Depois disso será criado na mão, com ng generate component nome-component
+
+
+

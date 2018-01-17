@@ -1,0 +1,29 @@
+Usado o conceito de WebComponents
+Para do componente onde o usuário poderá interagir, tudo isso dentro do component.ts
+dentro do @Component({
+    templateUrl: './cursos.component.html' - Indica qual sera o html utilizado pela URI
+})
+
+Usando interpolação {{ }} para obter o valor da variavel para exibir no html
+
+html:
+<p>
+  Lista de cursos do portal : {{ portal }}
+</p>
+
+component:
+portal : String;
+
+constructor() {
+   this.portal  = 'http://loiane.training';
+}
+
+Usando também DIRETIVAS para exibir o valor de forma dinamica:
+
+<li *ngFor="let curso of cursos">
+    {{ curso }}
+</li>
+
+Isso quer dizer que cada item da lista será de uma iteração na lista de cursos
+
+spec.ts - arquivo para fazer testes unitários 

@@ -1,0 +1,22 @@
+Arquivo que ajuda a organizar a aplicação e ajuda a modularizar.
+
+Bom pois, podemos desenvolver diretorios para organizar melhor o código.
+
+Com a utilização de Modulo é possivel escolher o que será exposto para outros módulos da aplicação.
+
+Declaração da class com export class Usando um Decorator (Parecido com as anotações) 
+para indicar que a classe é um Modulo
+que é o @NgModule({})  com os imports que são import { NgModule } from '@angular/core';
+@NgModule({ declarations:[ ExemploComponent ] - Todos componentes, diretivas e pipes que queremos usar, 
+imports:[ ExemploModule ] - Outros modulos que queremos utilizar ou que estão dentro dos componentes que queremos usar, 
+providers:[] - Serviço que ficaram disponiveis para todos os componentes declarados, 
+bootstrap:[MeuComponente] - Somente no modulo raiz, indica o componente que deve ser instaciado - AppModule})
+
+Depois de crescer a aplicação é necessário criar modulos de funcionalidade
+
+Entendendo a utilização do modulo
+
+exports: [CursosComponent] - Dentro desse meta dado é onde será indicado para outros módulos
+pode ser somente o seu, ou os seus dependes, como o caso de cursos-detalhe
+
+

@@ -1,0 +1,27 @@
+Data Binding - Forma de associar informações que estão no componente para o template e vice-versa.
+
+4 formas:
+{{ valor }} - Interpolation : Valor do atributo ou método que está no componente, e teremos essa saída no template.
+Unidirecional somente do component pro template
+
+[ propriedade ] = "valor" - Property Binding : Valor do atributo ou método que está no componente, e teremos essa saída no template.
+. ex: <img [src]= "imagem"> - o valor de imagem é preenchido dentro do componente com http://imagem.com/img.png
+quando não existe propriedade usa-se o [attr.coslpan] <- exemplo. Dificilmente utilizado.
+Unidirecional somente do component pro template
+
+(evento) = "handler" - Event Binding : Obtendo os eventos da tela como click do botão, foco, mudança de valor e disparar um metodo no
+componente para executar alguma lógica.
+ex.:
+
+<div>  
+    <button class="btn btn-primary" (click)="getAlert()">Me clique!</button>
+</div>
+
+Unidirecional somente do template, escutando o evento, para o component.
+
+[(ngModel)]  = "propriedade" - Two Way Data Binding : Mantem tanto o template e o componente atualizados automaticamente.
+
+
+
+
+

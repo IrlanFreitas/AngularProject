@@ -1,0 +1,18 @@
+Valor do Template para o Componente e vice-versa
+Usa-se binding de eventos + propriedades
+
+Manter os dados do Template e Componente sempre atualizados
+
+É basicamente um binding de propriedades com um
+binding de eventos
+
+[()] - Sintaxe "Banana in the box" - Banana na caixa
+
+[(ngModel)] - Representação do two-way data binding
+
+ngModel - Propriedade do angular que representa uma entidade
+que pode ser um campo simples [(ngModel)] = "nome" ou uma
+entidade [(ngModel)] = "pessoa.nome"
+
+Diretiva do angular que pertence ao FormsModule e é 
+necessário importar

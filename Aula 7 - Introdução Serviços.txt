@@ -1,0 +1,44 @@
+ng g s pasta\nomeService ou ng generate service pasta\nomeService - para criar service usando angular/cli
+
+Falando sobre a separação e que é necessário uma camada(serviço) para obter o dado
+do servidor/qualquer outra forma, pois no component serve somente para exibir os dados
+
+Como funciona a integração:
+component -> Service -> Backend(Node.JS, Java, .NET, etc...) / Via API's
+
+Basicamente um serviço é um classe com o Decorator @Injectable();
+
+Fazendo no component.ts:
+
+Inicialmente a injeção é feita pelo constructor, onde o serviço é injetado pelo constructor para que 
+não tenha a preocupação de instaciar essa conexão.
+
+constructor(cursosService: CursosService) {
+    this.portal  = 'http://loiane.training';
+    this.cursos = cursosService.getCursos() ;
+}
+
+Fazendo no service.ts:
+
+@Injectable()
+export class CursosService {
+
+  //http - Objeto do tipo HttpModule para conexão com o servidor
+
+  constructor() { }
+
+  getCursos() {
+    return ['Java', 'ItsJustAngular', 'REST'];
+  }
+}
+
+Obs: A injeção de dependencia é feita somente pelo constructor.
+
+Necessário adicionar ao módulo de Curso, uma propriedade chamada de providers, que indica
+que precisa de um fornecedor, onde esse provider fica indica o escopo desse serviço.
+
+providers: [
+    CursosService
+  ]
+
+
