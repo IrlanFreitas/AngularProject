@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-import { MeuPrimeiroComponent } from './meu-primeiro/meu-primeiro.component';
+import { StarwarsApiModule } from './starwars-api/starwars-api.module';
 
 
 @NgModule({
@@ -18,7 +18,8 @@ import { MeuPrimeiroComponent } from './meu-primeiro/meu-primeiro.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    CursosModule
+    CursosModule,
+    StarwarsApiModule
   ],
   //Serviços que irão ficar Disponiveis para todos os componentes declarados acima 
   //Como nesse caso é o app, fica de escopo global

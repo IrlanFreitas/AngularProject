@@ -12,4 +12,9 @@ export class CursoDetalheComponent implements OnInit {
   ngOnInit() {
   }
 
+  changeClass(event) {
+    console.log(event);
+    
+  }
+
 }

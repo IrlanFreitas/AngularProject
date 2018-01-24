@@ -1,3 +1,30 @@
-<p>
-  curso-detalhe works!
-</p>
+<div>
+  Selecione uma classe:
+  <select #varClasse (change)="0">
+    <option value="alert-sucess">Sucesso</option>
+    <option value="alert-info">Info</option>
+    <option value="alert-warning">Alerta</option>
+    <option value="alert-danger">Erro</option>
+  </select>
+  <br>
+  <div class="alert {{ varClasse.value }} " role="alert">Colorido conforme o valor do ComboBox.</div>
+  <br>
+  <div class="alert"  role="alert"  [class.alert-sucess]="varClasse.value == 'alert-sucess' ">
+    Sucesso!
+  </div>
+  <div class="alert" role="alert"  [class.alert-info]="varClasse.value == 'alert-info' ">
+    Info
+  </div>
+  <div class="alert" role="alert"  [class.alert-warning]="varClasse.value == 'alert-warning' ">
+    Alerta
+  </div>
+  <div class="alert" role="alert"  [class.alert-danger]="varClasse.value == 'alert-danger' ">
+    Erro!
+  </div>
+  <!-- style.display - como é utilizado do js puro como, element.style.backgroundColor = 'red' -->
+  <div class="alert alert-danger" role="alert"  [style.display]="varClasse.value == 'alert-danger' ? 'block' : 'none'  ">
+    Erro!
+  </div>
+
+
+</div>

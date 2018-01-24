@@ -15,7 +15,7 @@ export class CursosComponent implements OnInit {
   constructor(private cursosService: CursosService) {
     this.nomePortal = "http://loiane.training"
     this.cursos = this.cursosService.getCursos()
-    this.testeSwapi()
+    // this.testeSwapi()
    }
 
   ngOnInit() {
