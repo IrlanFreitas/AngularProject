@@ -5,12 +5,16 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { StarwarsApiModule } from './starwars-api/starwars-api.module';
+import { OutputPropertyComponent } from './output-property/output-property.component';
+import { InputPropertyComponent } from './input-property/input-property.component';
 
 
 @NgModule({
   //Components, Diretivas, Pipes
   declarations: [
-    AppComponent
+    AppComponent,
+    OutputPropertyComponent,
+    InputPropertyComponent
 
   ],
   //Modulos ou Components acima que pertecem ao Modulo
