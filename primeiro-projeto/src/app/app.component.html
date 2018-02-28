@@ -1,5 +1,45 @@
-<app-meu-primeiro></app-meu-primeiro>
+<!-- <app-meu-primeiro></app-meu-primeiro>
 
 <app-cursos></app-cursos>
 
-<app-starwars-api></app-starwars-api>
+<app-starwars-api></app-starwars-api> -->
+
+<!-- Data Binding -->
+<!-- <app-data-binding></app-data-binding> -->
+<!-- Data Binding -->
+
+
+<!-- Ciclo de Vida dos Components -->
+<!-- <app-ciclo [valorInicial]=valor *ngIf="!deletarCiclo"></app-ciclo>
+<button (click)="mudarValor()">Mudar Valor!</button>
+<button (click)="destruirClico()">Deletar</button> -->
+<!-- Ciclo de Vida dos Components -->
+
+
+<!-- Rotas -->
+<nav>
+    <div class="nav-wrapper">
+        <a routerLink="" class="brand-logo right">Rotas Ng2</a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li routerLinkActive="active">
+                <a routerLink="/login">Login</a>
+            </li>
+            <li routerLinkActive="active">
+                <a routerLink="/cursos">Cursos</a>
+            </li>
+            <li routerLinkActive="active">
+                <!-- routerLink aceita como propriedade um array de parametros -->
+                <!-- primeiro é a rota, depois o valor -->
+                <!-- Obs.: O valor só é passado para a rota depois de dois clicks -->
+                <a [routerLink]="['/curso/', idCurso.value ]">Curso com Id</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <p>Entre com o id do curso:</p>
+    <input #idCurso>
+    <!-- Os componentes a rota é renderizado dentro dessa tag -->
+    <router-outlet></router-outlet>
+</div>
+<!-- Rotas -->
